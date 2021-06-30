@@ -1,10 +1,10 @@
 import axios from 'axios';
 import React , {useState} from 'react'
-import img1 from "../images/logo.png"
 import PokemonModel from '../models/pokemon.model';
 
 interface PokemonCardProps {
     pokemon : PokemonModel;
+    loading : boolean;
 }
 
 export const PokemonCard: React.FC<PokemonCardProps> = (props:PokemonCardProps) => {
@@ -17,6 +17,9 @@ export const PokemonCard: React.FC<PokemonCardProps> = (props:PokemonCardProps) 
     }).catch((error)=>{
       console.log("error: ",error)
     })
+    if (props.loading){
+        return <h2>Loading...</h2>
+    }
         return (
             <div className = "pokemonCard">
                 <div className="pokemonCardWrapper">
