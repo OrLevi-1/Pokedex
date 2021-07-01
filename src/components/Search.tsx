@@ -4,11 +4,11 @@ interface SearchProps {
 
 }
 
-export const Search: React.FC<SearchProps> = ({}) => {
-        return (
-            <div>
-                <input type="text" className="searchInput"></input>
-                <button className="searchButton">Search</button>
-            </div>
-        );
+export const Search: React.FC<SearchProps> = ({ }) => {
+    return (
+        <div>
+            <input type="text" className="searchInput"></input>
+            <button className="searchButton">Search</button>
+        </div>
+    );
 }
